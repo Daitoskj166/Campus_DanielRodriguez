@@ -53,3 +53,30 @@ elif restaurante == "ramen":
     print("Valla a un restaurante japones")
 elif restaurante == "bandeja paisa":
     print("Valla a un restaurante colombiano")
+elif restaurante == "taco":
+    print("valla a un restaurante mexicano")
+
+#Verificación de Contraseña:
+#Solicita una contraseña y utiliza una declaración if para verificar si coincide con una contraseña predefinida antes de permitir el acceso.
+
+contraseña = "natashita1"
+
+cesion = input("ingrese la contraseña: ")
+
+if cesion == contraseña:
+    print("Acceso de cesion")
+else:
+    print("acceso denegado")
+    
+
+#Verificación de Palíndromo:
+#Pide a alguien que ingrese una palabra y utiliza condicionales para determinar si es un palíndromo, es decir, si s
+
+variableIngresada = input ("ingrese la palabra para determinar si es palindroma: ")
+
+
+
+if variableIngresada == variableIngresada[::-1]:
+    print("Es palindroma")
+else:
+    print("No es palindroma")
