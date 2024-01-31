@@ -1,9 +1,12 @@
 lista_de_tareas = []
 
 def añadir_tareas(tarea, lista_de_tareas,prioridad):
-    nueva_tarea = {'nombre': tarea, 'prioridad': prioridad}
-    lista_de_tareas.append(nueva_tarea)
-    print(f"nombre '{tarea}' añadida con prioridad {prioridad}")
+    if any(t['nombre'] == tarea for t in lista_de_tareas):
+        print("La tarea ya existe.")
+    else:
+        nueva_tarea = {'nombre': tarea, 'prioridad': prioridad}
+        lista_de_tareas.append(nueva_tarea)
+        print(f"nombre '{tarea}' añadida con prioridad {prioridad}")
 
 def mostrar_tareas(lista_de_tareas):
     if not lista_de_tareas:
@@ -31,7 +34,6 @@ while opcion != 4:
     opcion = eval(input("Porfavor escoja entre las siguientes opciones: "))
     if opcion > 4 or opcion < 1:
         print("Error, vuelva a ingresar")
-        break
     
     if opcion == 1:
         tarea = input("ingrese la tarea: ")
